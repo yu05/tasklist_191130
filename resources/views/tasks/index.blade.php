@@ -2,14 +2,15 @@
 
 @section('content')
 
-    <h1>メッセージ一覧</h1>
+    <h1>status一覧</h1>
 
     @if (count($tasks) > 0)
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>メッセージ</th>
+                    <th>status</th>
+                    <th>content</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +25,6 @@
         </table>
     @endif
     
-      {!! link_to_route('tasks.create', '新規メッセージの投稿', [], ['class' => 'btn btn-primary']) !!}
+      {!! link_to_route('tasks.create', '新規statusの投稿', [], ['class' => 'btn btn-primary']) !!}
       
 @endsection
